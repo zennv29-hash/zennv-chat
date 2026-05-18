@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENNV CHAT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login" id="loginBox">
+  <h1>ZENNV CHAT</h1>
+  <input type="text" id="username" placeholder="Masukkan nama">
+  <button onclick="login()">MASUK</button>
+</div>
+
+<div class="chat" id="chatBox">
+  <div class="top">
+    <h2 id="usernama"></h2>
+  </div>
+
+  <div class="messages" id="messages"></div>
+
+  <div class="send">
+    <input type="text" id="msg" placeholder="Ketik pesan...">
+    <button onclick="sendMessage()">Kirim</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
