@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-left">
+            <div class="logo-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="brand-info">
+                <h1>AI Chat Assistant</h1>
+                <p class="status-online"><span class="dot"></span> OpenAI GPT Connected</p>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <input type="password" id="apiKeyInput" value="••••••••••••••••" disabled>
+            <button id="clearChatBtn" onclick="clearChat()" title="Hapus Semua Chat">
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="chatBox" class="chat-container">
+        <div class="message-wrapper assistant">
+            <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+            <div class="message-bubble">
+                <p>Halo! Sesuai request kamu, kodingan ini sudah full dipasang API Key OpenAI milikmu secara otomatis.</p>
+                <p>Silakan ketik pertanyaan atau perintah apa saja di kolom bawah, lalu tekan Enter! 😊</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="typingIndicator" class="typing-indicator hidden">
+        <i class="fa-solid fa-circle-notch animate-spin"></i> AI sedang berpikir...
+    </div>
+
+    <footer class="app-footer">
+        <div class="input-wrapper">
+            <textarea id="userInput" rows="1" placeholder="Ketik pesan di sini... (Tekan Enter untuk kirim)" onkeydown="handleKeyPress(event)"></textarea>
+            <button id="sendBtn" onclick="sendMessage()">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
